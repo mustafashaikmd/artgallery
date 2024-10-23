@@ -1,0 +1,379 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* https://artgallery.yale.edu/sites/default/files/styles/hero_small/public/2023-01/ag-doc-2281-0036-pub.jpg?h=147a4df9&itok=uclO7OrF */
+
+.navbar {
+    background-color: #1e1e2f; 
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #e3b04b; 
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background-color: #e3b04b;
+}
+  
+  
+  
+  .navbar-nav .nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+    text-transform: uppercase;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #e3b04b;
+  }
+  
+  .navbar-nav .nav-item.active .nav-link {
+    color: #e3b04b;
+  }
+  
+  /* Header Section */
+  .header {
+    background: url('https://artgallery.yale.edu/sites/default/files/styles/hero_small/public/2023-01/ag-doc-2281-0036-pub.jpg?h=147a4df9&itok=uclO7OrF') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .header p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .header p {
+      font-size: 1.1rem;
+    }
+  
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+  
+
+/* Artists Section */
+#artists {
+    background-color: #1e1e2f;
+    padding: 4rem 0;
+  }
+  
+  #artists h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #f8f9fa;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  
+  /* Card Styling */
+  #artists .card {
+    border: none;
+    border-radius: 10px;
+    background-color: #2d2d44;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #artists .card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  #artists .card img {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  #artists .card-body {
+    color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  #artists .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #e3b04b;
+  }
+  
+  #artists .card-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #d1d1e0;
+  }
+  
+  #artists .card img {
+    transition: transform 0.4s ease;
+  }
+  
+  #artists .card img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    #artists .card {
+      margin-bottom: 2rem; 
+    }
+  }
+  
+/* Gallery Section */
+#gallery {
+    background-color: #1e1e2f;
+    padding: 5rem 0;
+  }
+  
+  #gallery h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #f8f9fa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  /* Carousel Styling */
+  .carousel-inner img {
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-inner img:hover {
+    transform: scale(1.05);
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1);
+  }
+  
+  .carousel-indicators li {
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    width: 5%;
+  }
+  
+  /* Grid Styling */
+  #gallery .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  #gallery .col-lg-4 {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  
+  #gallery .col-lg-4 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  #gallery .col-lg-4:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  #gallery .col-lg-4:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  #gallery .col-lg-4:hover:after {
+    opacity: 1;
+  }
+  
+  #gallery .col-lg-4:hover img {
+    filter: brightness(0.8);
+  }
+  
+  /* Responsive Carousel */
+  @media (max-width: 768px) {
+    #gallery .carousel-control-prev,
+    #gallery .carousel-control-next {
+      width: 10%; 
+    }
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+
+/* Contact Section */
+#contact {
+    font-family: 'Playfair Display', serif;
+    background-color: #1e1e2f;
+    padding: 50px 0;
+}
+
+#contact h2 {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#contact form {
+    background-color: #fff;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#contact .form-control {
+    border-radius: 50px;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#contact .form-control:focus {
+    border-color: #c33764;
+    box-shadow: 0 0 10px rgba(195, 55, 100, 0.3);
+    outline: none;
+}
+
+#contact .btn-primary {
+    background-color: #c33764;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+#contact .btn-primary:hover {
+    background-color: #1d2671;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(29, 38, 113, 0.3);
+}
+
+#contact .btn-primary:focus {
+    outline: none;
+}
+
+#contact textarea {
+    resize: none;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #1e1e2f; 
+    color: #f8f9fa;
+    padding: 1.5rem 0; 
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #e3b04b;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  footer p:hover {
+    color: #f8f9fa; 
+    transition: color 0.3s ease-in-out;
+  }
+  
+  footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 50px;
+    background-color: #e3b04b;
+    border-radius: 10px;
+  }
+  
+  footer a {
+    color: #e3b04b;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #f8f9fa; 
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    footer p {
+      font-size: 0.9rem;
+    }
+  }
+  
